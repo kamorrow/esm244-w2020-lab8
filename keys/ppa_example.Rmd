@@ -12,7 +12,7 @@ library(here)
 library(sf)
 library(rgdal)
 library(spatstat)
-library(maptools) 
+library(maptools)
 library(sp)
 
 # NOTE: It seems like maptools is under heavy dev right now and many of the functions we're trying (unsuccessfully) to use in maptools to make spatial points stuff, and the problem seems to be the newer versions are problematic. If you were having the "must be projected" error when trying to convert spatial "ppp", the potential fix is to force install an older version of the maptools package. 
@@ -118,6 +118,7 @@ plot(grouse_density)
 ```
 
 ### Nearest neighbor analysis (G-Function):
+Compared with a simulation of complete spatial randomness, how many observations have a nearest neighbor closer or further away than the simulated expected value.
 ```{r}
 # r <- seq(0,0.000001, by = 0.0000005)
 
